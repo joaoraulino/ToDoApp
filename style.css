@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+
+.praFaze{
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.container{
+  height: 40em;
+  width: 35em;
+  border: 0.2em solid black;
+  border-radius: 2em;
+}
+
+
