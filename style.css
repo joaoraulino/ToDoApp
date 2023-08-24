@@ -1,24 +1,39 @@
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,500&display=swap');
+
+ * {
+  margin: 0;
+  padding: 0;
+ }
+
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
-  }
-
-.praFaze{
-    font-family: 'Montserrat', Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.container{
-  height: 40em;
-  width: 35em;
+.content{
+  display: flex;
+  flex-direction: column;
+  width: 40em;
+  height: 35em;
   border: 0.2em solid black;
-  border-radius: 2em;
+  border-radius: 16px;
 }
 
+.titulo{
+  display: flex;
+  flex-direction:row;
+  padding: 0 0 0.5em;
+}
 
+.content--footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.content--footer p{
+  padding: 0 5em;
+}
