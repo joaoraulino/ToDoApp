@@ -7,24 +7,28 @@
  }
 
 body {
+  width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-family: 'Montserrat', sans-serif;
+  background-color: #f5ddd9;
 }
 
 .content{
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
-  width: 40em;
-  height: 35em;
+  width: 540px;
+  height: 540px;
+  max-width: 540px;
+  max-height: 540px;
   border: 0.2em solid black;
   border-radius: 16px;
-  padding: 1em;
-
+  margin: 100px auto 20px;
+  padding: 25px 30px 25px;
+  background-color: white;
   font-family:'Happy Monkey';
   font-weight: 700;
 }
@@ -33,12 +37,13 @@ body {
   display: flex;
   flex-direction:row;
   padding: 0 0 0.5em;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .content--input{
   display: flex;
   justify-content: space-between;
-  gap:1.5em;
+  gap: 0.5em;
   padding: 0 0 1em;
 }
 
@@ -57,45 +62,77 @@ input{
   color: #de6c5c;
 }
 
-button {
-  --button_radius: 0.75em;
-  --button_color: #de6c5c;
-  --button_outline_color: #000000;
-  font-size: 17px;
+#input-button{
+  border: 3px solid black;
+  border-radius: 12px;
+  letter-spacing: 1px;
+  color: white;
+  background-color: #de6c5c;
   font-family:'Happy Monkey';
   font-weight: 700;
-  border: none;
-  border-radius: var(--button_radius);
-  background: var(--button_outline_color);
+  width: 25%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
 }
 
-.button_top {
-  display: block;
-  box-sizing: border-box;
-  border: 2px solid var(--button_outline_color);
-  border-radius: var(--button_radius);
-  padding: 0.75em 1.5em;
-  background: var(--button_color);
-  color: var(--button_outline_color);
-  transform: translateY(-0.2em);
-  transition: transform 0.1s ease;
+#input-button:active {
+  background-color: #de6b5cce;
+  transform: scale(0.95);
 }
 
-button:hover .button_top {
-  transform: translateY(-0.33em);
-}
-
-button:active .button_top {
-  transform: translateY(0);
-}
-
-.content--tasks{
+ul{
   display: flex;
   flex-direction: column;
-  padding: 1 -1 1 1;
-  border: 1px solid black;
-  width: 100%;
+  border: 2px solid black;
+  border-radius: 12px;
   height: 100%;
+}
+
+ul li{
+  list-style: none;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before{
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(img/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 8px;
+  left: 8px;
+}
+
+ul li.checked{
+  color: #de6c5c;
+  text-decoration: line-through;
+}
+
+ul li.checked::before{
+  background-image: url(img/checked.png);
+}
+
+ul li span{
+  position: absolute;
+  right: 5px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  font-size: 35px;
+  color: #555;
+  line-height: 25px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover{
+  background-color: #de6c5c;
 }
 
 .content--footer {
@@ -109,8 +146,18 @@ button:active .button_top {
   color: #de6c5c;
 }
 
+
 a{
   text-decoration: none;
   color: #000000;
+}
+
+a:hover{
+  color: #de6c5c;
+}
+
+a.selected {
+  color: #de6c5c;
+  text-decoration:underline 2px;
 }
 

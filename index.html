@@ -7,27 +7,27 @@
     <title>Tarefas pendentes</title>
 </head>
 <body>
-        <div class="titulo">
-            <h1>Pra Fazê!</h1>
-            <img src="./img/clipboard-text.png" alt="">
-        </div>
+        
         <div class="content">
+            <div class="titulo">
+                <h1>Pra Fazê!</h1>
+                <img src="./img/clipboard-text.png" alt="">
+            </div>
             <div class="content--input">
-                <input type="text" class="input-task" placeholder="Nova tarefa">
-                <button>
-                    <span class="button_top">Adicionar</span>
+                <input type="text" class="input-task" placeholder="Nova tarefa" id="input-box">
+                <button onclick="addTask()" id="input-button">Adicionar
                 </button>
             </div>
-            <div class="content--tasks">
-                
-            </div>
+            <ul id="list-container">
+            </ul>
             <div class="content--footer">
                 <p>Itens restantes</p>
-                <a href="">Tudo</a>
+                <a href="" class="selected">Tudo</a>
                 <a href="">Ativas</a>
                 <a href="">Completas</a>
                 <a href="">Limpar Completas</a>
             </div>
         </div>
 </body>
+<script src="script.js"></script>
 </html>
