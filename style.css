@@ -80,12 +80,23 @@ input{
   transform: scale(0.95);
 }
 
-ul{
+#list-container{
   display: flex;
   flex-direction: column;
   border: 2px solid black;
   border-radius: 12px;
   height: 100%;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: #de6b5cce; 
 }
 
 ul li{
@@ -156,7 +167,7 @@ a:hover{
   color: #de6c5c;
 }
 
-a.selected {
+.selected {
   color: #de6c5c;
   text-decoration:underline 2px;
 }

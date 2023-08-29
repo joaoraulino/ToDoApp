@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
                 <img src="./img/clipboard-text.png" alt="">
             </div>
             <div class="content--input">
-                <input type="text" class="input-task" placeholder="Nova tarefa" id="input-box">
+                <input type="text" class="input-task" id="input-box" placeholder="Nova tarefa">
                 <button onclick="addTask()" id="input-button">Adicionar
                 </button>
             </div>
@@ -22,10 +22,10 @@
             </ul>
             <div class="content--footer">
                 <p>Itens restantes</p>
-                <a href="" class="selected">Tudo</a>
-                <a href="">Ativas</a>
-                <a href="">Completas</a>
-                <a href="">Limpar Completas</a>
+                <a href="#" class="selected" data-filter="all">Tudo</a>
+                <a href="#" data-filter="active">Ativas</a>
+                <a href="#" data-filter="completed">Completas</a>
+                <a href="#" id="LimparCompletas">Limpar Completas</a>
             </div>
         </div>
 </body>
