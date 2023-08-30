@@ -82,7 +82,6 @@ document.getElementById("LimparCompletas").addEventListener("click", function(ev
         }
     });
 
-    // Remover a classe "selected" do link "Limpar Completas"
     document.querySelectorAll(".content--footer a").forEach(link => {
         if (link.getAttribute("data-filter") === "completed") {
             link.classList.remove("selected");
